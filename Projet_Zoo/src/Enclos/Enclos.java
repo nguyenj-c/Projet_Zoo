@@ -1,5 +1,6 @@
 /**
- * 
+ * @author Nguyen, Khalil
+ *
  */
 package Enclos;
 
@@ -7,10 +8,6 @@ import java.util.*;
 
 import Animaux.Animaux;
 
-/**
- * @author n19004502
- *
- */
 public abstract class Enclos<T> {
 	private String name;
 	private double supercifie;

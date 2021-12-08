@@ -1,12 +1,11 @@
 /**
- * 
+ * @author Nguyen, Khalil
+ *
  */
 package Zoo;
 
-/**
- * @author n19004502
- *
- */
+import Enclos.Enclos;
+
 public class Employe {
 	
 	private String name;
@@ -15,8 +14,16 @@ public class Employe {
 	/**
 	 * 
 	 */
-	public Employe() {
-		// TODO Auto-generated constructor stub
+	public Employe(String name, String sexe, int age) {
+		if (name == null || name.isBlank()) {
+			throw new IllegalArgumentException("Le nom de l'employé ne peut pas être vide.");
+		}
+		if (age <= 18) {
+			throw new IllegalArgumentException("L'employé doit être majeur. L'âge doit être supérieur ou équal à 18.");
+		}
+		this.name = name;
+		this.sexe = sexe;
+		this.age = age;
 	}
 	/**
 	 * @return the name
@@ -55,32 +62,22 @@ public class Employe {
 		this.age = age;
 	}
 
-	
-	public void analyseEnclos() {
-		Enclos enclos = new Enclos();
+	public void analyseEnclos(Enclos enclos) {
 		System.out.println(enclos);
 		System.out.println(enclos.getActualAnimals());
 	}
-	public void cleanEnclos() {
-		Enclos enclos = new Enclos();
-		enclos.maintenance(null);
+	public void cleanEnclos(Enclos enclos) {
+		//enclos.maintenance(null);
 		
 	}
 	@Override
 	public String toString() {
-		return "Employe [name=" + name + ", sexe=" + sexe + ", age=" + age + "]";
+		return "Employe {name=" + name + ", sexe=" + sexe + ", age=" + age + "}";
 	}
-	public void feedAnimalsEnclos() {
-		Enclos enclos = new Enclos();
-		enclos.feedAnimals();
+	public void feedAnimalsEnclos(Enclos enclos1) {
+		enclos1.feedAnimals();
 	}
-	public void transferAnimals(Animaux espece) {
-		Enclos enclos = new Enclos();
-		Enclos enclos2 = new Enclos();
-		enclos.getActualAnimals();
-		
-		enclos.enlever(espece);
-		enclos2.ajouter(espece);
-
+	public void transferAnimals(Enclos enclos1) {
+		//enclos1.transferer();
 	}
 }

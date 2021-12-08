@@ -1,14 +1,19 @@
 /**
- * 
+ * @author Nguyen, Khalil
+ *
  */
 package Zoo;
 
-/**
- * @author n19004502
- *
- */
+import java.util.ArrayList;
+
+import Enclos.Enclos;
+
 public class Zoo {
 
+	private String name;
+	private Employe employee;
+	private int maxEnclosure;
+	private ArrayList<Enclos> enclos;
 	/**
 	 * 
 	 */

@@ -1,3 +1,7 @@
+/**
+ * @author Nguyen, Khalil
+ *
+ */
 package Enclos;
 
 import Animaux.Marins;
