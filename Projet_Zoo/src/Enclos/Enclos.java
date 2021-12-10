@@ -54,7 +54,7 @@ public abstract class Enclos<T> {
 	}
 
 	/**
-	 * Permet de modifier l'état actuel de l'enclos
+	 * Change l'état actuel de l'enclos
 	 * @param actualProprete the actualProprete to set
 	 */
 	public void setActualProprete(degreProprete actualProprete) {
@@ -70,7 +70,7 @@ public abstract class Enclos<T> {
 	}
 
 	/**
-	 * Permet de modifier le nom de l'enclos
+	 * Change le nom de l'enclos
 	 * @param name the name to set
 	 */
 	public void setName(String name) {
@@ -101,7 +101,7 @@ public abstract class Enclos<T> {
 	}
 
 	/**
-	 * Permet de modifier le nombre maximales d'animaux que l'enclos peut stocker
+	 * Change le nombre maximales d'animaux que l'enclos peut stocker
 	 * @param maxAnimals the maxAnimals to set
 	 */
 	public void setMaxAnimals(int maxAnimals) {
@@ -117,7 +117,7 @@ public abstract class Enclos<T> {
 	}
 
 	/**
-	 * Permet de modifier le nombre d'animaux de l'enclos
+	 * Change le nombre d'animaux de l'enclos
 	 * @param nbAnimals the nbAnimals to set
 	 */
 	public void setNbAnimals(int nbAnimals) {
@@ -133,7 +133,7 @@ public abstract class Enclos<T> {
 	}
 
 	/**
-	 * Permet de modifier la liste des animaux actuelles dans l'enclos
+	 * Change la liste des animaux actuelles dans l'enclos
 	 * @param actualAnimals the actualAnimals to set
 	 */
 	public void setActualAnimals(ArrayList<T> actualAnimals) {

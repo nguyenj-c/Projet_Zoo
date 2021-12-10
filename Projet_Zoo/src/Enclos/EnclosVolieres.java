@@ -18,7 +18,7 @@ public class EnclosVolieres <T extends Volants> extends Enclos <T>{
 	}
 
 	/**
-	 * Permet de modifier la taille de la volieres
+	 * Change la taille de la volieres
 	 * @param taille the taille to set
 	 */
 	public void setTaille(int taille) {

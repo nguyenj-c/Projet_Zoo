@@ -21,7 +21,7 @@ public class EnclosAquarium <T extends Marins> extends Enclos <T>{
 
 
 	/**
-	 * Permet de modifier la profondeur de l'aquarium
+	 * Change la profondeur de l'aquarium
 	 * @param profondeur the profondeur to set
 	 */
 	public void setProfondeur(int profondeur) {
@@ -39,7 +39,7 @@ public class EnclosAquarium <T extends Marins> extends Enclos <T>{
 
 
 	/**
-	 * Permet de modifier la salinité de l'eau
+	 * Change la salinité de l'eau
 	 * @param saliniteEau the saliniteEau to set
 	 */
 	public void setSaliniteEau(double saliniteEau) {
