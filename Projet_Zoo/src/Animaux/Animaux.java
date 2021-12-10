@@ -27,6 +27,7 @@ public abstract class Animaux{
 	}
 
 	/**
+	 * Retourne le nom
 	 * @return the name
 	 */
 	public String getName() {
@@ -34,6 +35,7 @@ public abstract class Animaux{
 	}
 
 	/**
+	 *
 	 * @param name the name to set
 	 */
 	public void setName(String name) {
@@ -41,6 +43,7 @@ public abstract class Animaux{
 	}
 
 	/**
+	 * Retourne le sexe des animaux
 	 * @return the sexe
 	 */
 	public boolean isSexe() {
@@ -59,6 +62,7 @@ public abstract class Animaux{
 	}
 
 	/**
+	 * Retourne le poids des animaux
 	 * @return the poids
 	 */
 	public double getPoids() {
@@ -73,6 +77,7 @@ public abstract class Animaux{
 	}
 
 	/**
+	 * Retourne l taille des animaux
 	 * @return the taille
 	 */
 	public double getTaille() {
@@ -87,6 +92,7 @@ public abstract class Animaux{
 	}
 
 	/**
+	 * Retourne l'âge des animaux
 	 * @return the age
 	 */
 	public int getAge() {
@@ -101,6 +107,7 @@ public abstract class Animaux{
 	}
 
 	/**
+	 * Retourne la faim des animaux
 	 * @return the hungryIndicator
 	 */
 	public boolean isHungryIndicator() {
@@ -119,6 +126,7 @@ public abstract class Animaux{
 	}
 
 	/**
+	 * Retourne l'état de sommeil des animaux
 	 * @return the sleepIndicator
 	 */
 	public boolean isSleepIndicator() {
@@ -138,6 +146,7 @@ public abstract class Animaux{
 	}
 
 	/**
+	 * Retourne la santé des animaux
 	 * @return the healthIndicator
 	 */
 	public boolean isHealthIndicator() {
@@ -152,6 +161,7 @@ public abstract class Animaux{
 	}
 
 	/**
+	 *
 	 * @param healthIndicator the healthIndicator to set
 	 */
 	public boolean eat(boolean hungryIndicator) {
@@ -164,29 +174,35 @@ public abstract class Animaux{
 		return sleepIndicator;
 
 	}
-
+	/**
+	 * Cri de l'animal en fonction de ces besoin
+	 */
 	public void sound(boolean hungryIndicator, boolean sleepIndicator, boolean healthIndicator) {
 		if (hungryIndicator == true) {
-			System.out.println("faim " + name);
+			System.out.println("J'ai faim " + name);
 		}
 		if (sleepIndicator == true) {
-			System.out.println("dormir " + name);
+			System.out.println("J'ai sommeil " + name);
 		}
 		if (healthIndicator == true) {
-			System.out.println("gu�risson " + name);
+			System.out.println("Je suis soigné " + name);
 		}
 		if (healthIndicator == false && sleepIndicator == false && hungryIndicator == false) {
 			System.out.println(name);
 		}
 	}
-
+	/**
+	 * Soigner les animaux
+	 */
 	public void beHealed(boolean healthIndicator) {
 		if (this.healthIndicator == false) {
 			this.healthIndicator = true;
-			System.out.println("Je suis gu�rri :" + this.healthIndicator);
+			System.out.println("Je suis guérri :" + this.healthIndicator);
 		}
 	}
-
+	/**
+	 * Etat de sommeil des animaux
+	 */
 	public void sleepState(boolean sleepIndicator) {
 		if (this.sleepIndicator == true) {
 			this.sleepIndicator = false;
@@ -198,11 +214,6 @@ public abstract class Animaux{
 
 	}
 
-	@Override
-	public void run() {
-		// TODO Auto-generated method stub
-		//sleepState();
-	}
 
 	@Override
 	public String toString() {
