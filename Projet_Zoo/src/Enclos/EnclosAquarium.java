@@ -4,7 +4,7 @@
  */
 package Enclos;
 
-import Animaux.Marins;
+import Animaux.Especes.Marins;
 
 public class EnclosAquarium <T extends Marins> extends Enclos <T>{
 	private int profondeur;
@@ -12,6 +12,7 @@ public class EnclosAquarium <T extends Marins> extends Enclos <T>{
 	
 	
 	/**
+	 * Retourne la profondeur de l'aquarium
 	 * @return the profondeur
 	 */
 	public int getProfondeur() {
@@ -20,6 +21,7 @@ public class EnclosAquarium <T extends Marins> extends Enclos <T>{
 
 
 	/**
+	 * Permet de modifier la profondeur de l'aquarium
 	 * @param profondeur the profondeur to set
 	 */
 	public void setProfondeur(int profondeur) {
@@ -28,6 +30,7 @@ public class EnclosAquarium <T extends Marins> extends Enclos <T>{
 
 
 	/**
+	 * Retourne la salinité de l'eau
 	 * @return the saliniteEau
 	 */
 	public double getSaliniteEau() {
@@ -36,6 +39,7 @@ public class EnclosAquarium <T extends Marins> extends Enclos <T>{
 
 
 	/**
+	 * Permet de modifier la salinité de l'eau
 	 * @param saliniteEau the saliniteEau to set
 	 */
 	public void setSaliniteEau(double saliniteEau) {
@@ -44,6 +48,7 @@ public class EnclosAquarium <T extends Marins> extends Enclos <T>{
 
 
 	/**
+	 * Constructeur d'aquarium
 	 * @param profondeur
 	 * @param saliniteEau
 	 */

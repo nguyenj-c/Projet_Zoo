@@ -13,9 +13,11 @@ public abstract class Enclos<T> {
 	private double supercifie;
 	private int maxAnimals;
 	private int nbAnimals;
-	// private Animaux[] actualAnimals= new Animaux[maxAnimals];
 	private ArrayList<T> actualAnimals;
 
+	/**
+	 * Etat de propreté de l'enclos
+	 */
 	private enum degreProprete {
 		mauvais, correct, bon
 	}
@@ -44,6 +46,7 @@ public abstract class Enclos<T> {
 	}
 
 	/**
+	 * Retourne l'état actuel de l'enclos
 	 * @return the actualProprete
 	 */
 	public degreProprete getActualProprete() {
@@ -51,6 +54,7 @@ public abstract class Enclos<T> {
 	}
 
 	/**
+	 * Permet de modifier l'état actuel de l'enclos
 	 * @param actualProprete the actualProprete to set
 	 */
 	public void setActualProprete(degreProprete actualProprete) {
@@ -58,6 +62,7 @@ public abstract class Enclos<T> {
 	}
 
 	/**
+	 * Retourne le nom de l'enclos
 	 * @return the name
 	 */
 	public String getName() {
@@ -65,6 +70,7 @@ public abstract class Enclos<T> {
 	}
 
 	/**
+	 * Permet de modifier le nom de l'enclos
 	 * @param name the name to set
 	 */
 	public void setName(String name) {
@@ -72,13 +78,14 @@ public abstract class Enclos<T> {
 	}
 
 	/**
+	 * Retourne la superficie de l'enclos
 	 * @return the supercifie
 	 */
 	public double getSupercifie() {
 		return supercifie;
 	}
 
-	/**
+	/** Permet de modifier la superficie de l'enclos
 	 * @param supercifie the supercifie to set
 	 */
 	public void setSupercifie(double supercifie) {
@@ -86,6 +93,7 @@ public abstract class Enclos<T> {
 	}
 
 	/**
+	 * Retourne le nombre maximales d'animaux que l'enclos peut stocker
 	 * @return the maxAnimals
 	 */
 	public int getMaxAnimals() {
@@ -93,6 +101,7 @@ public abstract class Enclos<T> {
 	}
 
 	/**
+	 * Permet de modifier le nombre maximales d'animaux que l'enclos peut stocker
 	 * @param maxAnimals the maxAnimals to set
 	 */
 	public void setMaxAnimals(int maxAnimals) {
@@ -100,6 +109,7 @@ public abstract class Enclos<T> {
 	}
 
 	/**
+	 * Retourne le nombre actuel des animaux dans l'enclos
 	 * @return the nbAnimals
 	 */
 	public int getNbAnimals() {
@@ -107,6 +117,7 @@ public abstract class Enclos<T> {
 	}
 
 	/**
+	 * Permet de modifier le nombre d'animaux de l'enclos
 	 * @param nbAnimals the nbAnimals to set
 	 */
 	public void setNbAnimals(int nbAnimals) {
@@ -114,6 +125,7 @@ public abstract class Enclos<T> {
 	}
 
 	/**
+	 * Retourne une liste des animaux actuelles dans l'enclos
 	 * @return the actualAnimals
 	 */
 	public List<T> getActualAnimals() {
@@ -121,6 +133,7 @@ public abstract class Enclos<T> {
 	}
 
 	/**
+	 * Permet de modifier la liste des animaux actuelles dans l'enclos
 	 * @param actualAnimals the actualAnimals to set
 	 */
 	public void setActualAnimals(ArrayList<T> actualAnimals) {
@@ -136,7 +149,6 @@ public abstract class Enclos<T> {
 	/**
 	 * Affiche les caractéristiques des animaux actuels
 	 */
-
 	public void printAnimalsAttributs() {
 		System.out.println(toString());
 		System.out.println(getActualAnimals());
@@ -144,7 +156,6 @@ public abstract class Enclos<T> {
 
 	/**
 	 * Permet d'ajouter des animaux de l'enclos
-	 * 
 	 * @param espece
 	 */
 	public void ajouter(T espece) {
@@ -161,7 +172,6 @@ public abstract class Enclos<T> {
 
 	/**
 	 * Permet d'enlever les animaux de l'enclos
-	 * 
 	 * @param espece
 	 */
 	public void enlever(T espece) {
@@ -196,13 +206,13 @@ public abstract class Enclos<T> {
 	 * Permet de dire si l'enclos est vide ou dire l'etat de l'enclos
 	 */
 	public void maintenance() {
-		if (getNbAnimals() == 0 && this.actualProprete == degreProprete.mauvais) {
+		if (getNbAnimals() == 0 && getActualProprete() == degreProprete.mauvais) {
 			setActualProprete(degreProprete.bon);
-			System.out.println("Nettoyage enclos fini. Etat enclos : " + this.actualProprete);
+			System.out.println("Nettoyage enclos fini. Etat enclos : " + getActualProprete());
 		} else if (getNbAnimals() != 0) {
 			System.out.println("L'enclos n'est pas vide donc nettoyage impossible");
 		} else {
-			System.out.println("Etat enclos : " + this.actualProprete + ", Nb animals : " + this.nbAnimals);
+			System.out.println("Etat enclos : " + getActualProprete() + ", Nb animals : " + getNbAnimals());
 		}
 	}
 }

@@ -4,12 +4,13 @@
  */
 package Enclos;
 
-import Animaux.Volants;
+import Animaux.Especes.Volants;
 
 public class EnclosVolieres <T extends Volants> extends Enclos <T>{
 	private int taille;
 
 	/**
+	 * Retourne la taille de la volieres
 	 * @return the taille
 	 */
 	public int getTaille() {
@@ -17,6 +18,7 @@ public class EnclosVolieres <T extends Volants> extends Enclos <T>{
 	}
 
 	/**
+	 * Permet de modifier la taille de la volieres
 	 * @param taille the taille to set
 	 */
 	public void setTaille(int taille) {
@@ -24,6 +26,7 @@ public class EnclosVolieres <T extends Volants> extends Enclos <T>{
 	}
 
 	/**
+	 * Constructeur de volières
 	 * @param taille
 	 */
 	public EnclosVolieres(int taille) {
