@@ -8,7 +8,7 @@ import java.util.*;
 
 import Animaux.Animaux;
 
-public abstract class Enclos {
+public class Enclos {
 	private String name;
 	private double supercifie;
 	private int maxAnimals;
