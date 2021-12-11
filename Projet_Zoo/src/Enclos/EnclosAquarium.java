@@ -6,7 +6,7 @@ package Enclos;
 
 import Animaux.Especes.Marins;
 
-public class EnclosAquarium <T extends Marins> extends Enclos <T>{
+public class EnclosAquarium <T extends Marins> extends Enclos{
 	private int profondeur;
 	private double saliniteEau;
 	
