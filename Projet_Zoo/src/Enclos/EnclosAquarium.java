@@ -39,7 +39,7 @@ public class EnclosAquarium <T extends Marins> extends Enclos <T>{
 
 
 	/**
-	 * Change la salinité de l'eau
+	 * Change la salinitÃ© de l'eau
 	 * @param saliniteEau the saliniteEau to set
 	 */
 	public void setSaliniteEau(double saliniteEau) {
@@ -49,11 +49,14 @@ public class EnclosAquarium <T extends Marins> extends Enclos <T>{
 
 	/**
 	 * Constructeur d'aquarium
+	 * @param name
+	 * @param supercifie
+	 * @param maxAnimals
 	 * @param profondeur
 	 * @param saliniteEau
 	 */
-	public EnclosAquarium(int profondeur, double saliniteEau) {
-		super();
+	public EnclosAquarium(String name, double superficie, int maxAnimals, int profondeur, double saliniteEau) {
+		super(name, superficie, maxAnimals);
 		this.profondeur = profondeur;
 		this.saliniteEau = saliniteEau;
 	}
