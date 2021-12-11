@@ -27,10 +27,13 @@ public class EnclosVolieres <T extends Volants> extends Enclos <T>{
 
 	/**
 	 * Constructeur de volieres
+	 * @param name
+	 * @param supercifie
+	 * @param maxAnimals
 	 * @param taille
 	 */
-	public EnclosVolieres(int taille) {
-		super();
+	public EnclosVolieres(String name, double superficie, int maxAnimals, int taille) {
+		super(name, superficie, maxAnimals);
 		this.taille = taille;
 	}	
 	
