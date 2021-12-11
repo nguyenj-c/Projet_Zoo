@@ -10,11 +10,11 @@ package Animaux.Especes;
 public interface Mammiferes {
 
 	/**
-	 * DÈclaration de la mÈthode reproduire des mammiferes
+	 * D√©claration de la m√©thode reproduire des mammif√®res
 	 */
 	public void reproduire();
 	/**
-	 * DÈclaration de la mÈthode dÈplacement des mammiferes
+	 * D√©claration de la m√©thode d√©placement des mammif√®res
 	 */
 	public void deplacement();
 

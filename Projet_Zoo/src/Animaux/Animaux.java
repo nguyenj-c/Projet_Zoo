@@ -28,6 +28,11 @@ public abstract class Animaux{
 	 * Si healthIndicator est true, il est en bonne santé sinon non
 	 */
 	private boolean healthIndicator;
+	/**
+	 * Espèce de l'animal
+	 * @return string
+	 */
+	public abstract String getSpecies();
 
 	public Animaux(String name, int age) {
 		Random r = new Random();
@@ -70,7 +75,7 @@ public abstract class Animaux{
 	 * @param sexe the sexe to set
 	 */
 	public void setSexe(boolean sexe) {
-		if (this.sexe == true || this.sexe == false) {
+		if (isSexe() == true || isSexe() == false) {
 			this.sexe = sexe;
 		} else {
 			System.out.println("Erreur lors de la saisie du sexe : valeur incorrect");
@@ -110,7 +115,7 @@ public abstract class Animaux{
 	}
 
 	/**
-	 * Retourne l'age de l'animal
+	 * Retourne l'âge de l'animal
 	 * @return the age
 	 */
 	public int getAge() {
@@ -138,7 +143,7 @@ public abstract class Animaux{
 	 * @param hungryIndicator the hungryIndicator to set
 	 */
 	public void setHungryIndicator(boolean hungryIndicator) {
-		if (this.hungryIndicator == true || this.hungryIndicator == false) {
+		if (isHungryIndicator() == true || isHungryIndicator() == false) {
 			this.hungryIndicator = hungryIndicator;
 		} else {
 			System.out.println("Erreur lors de la saisie des valeur");
@@ -146,7 +151,7 @@ public abstract class Animaux{
 	}
 
 	/**
-	 * Retourne l'�tat de sommeil de l'animal
+	 * Retourne l'état de sommeil de l'animal
 	 * @return the sleepIndicator
 	 */
 	public boolean isSleepIndicator() {
@@ -158,7 +163,7 @@ public abstract class Animaux{
 	 * @param sleepIndicator the sleepIndicator to set
 	 */
 	public void setSleepIndicator(boolean sleepIndicator) {
-		if (this.sleepIndicator == true || this.sleepIndicator == false) {
+		if (isSleepIndicator() == true || isSleepIndicator() == false) {
 			this.sleepIndicator = sleepIndicator;
 		} else {
 			System.out.println("Erreur lors de la saisie des valeur");
@@ -175,7 +180,7 @@ public abstract class Animaux{
 	}
 
 	/**
-	 * Change la sant� de l'animal
+	 * Change la santé de l'animal
 	 * @param healthIndicator the healthIndicator to set
 	 */
 	public void setHealthIndicator(boolean healthIndicator) {
@@ -187,7 +192,7 @@ public abstract class Animaux{
 	 * @param healthIndicator the healthIndicator to set
 	 */
 	public boolean eat(boolean hungryIndicator) {
-		if (this.sleepIndicator == false && this.hungryIndicator == true) {
+		if (isSleepIndicator() == false && isHungryIndicator() == true) {
 			setHungryIndicator(false);
 			System.out.println("Je mange" + name);
 		} else {
@@ -200,17 +205,17 @@ public abstract class Animaux{
 	/**
 	 * Cri de l'animal en fonction de ces besoin
 	 */
-	public void sound(boolean hungryIndicator, boolean sleepIndicator, boolean healthIndicator) {
-		if (hungryIndicator == true) {
+	public void sound() {
+		if (isHungryIndicator() == true) {
 			System.out.println("J'ai faim " + name);
 		}
-		if (sleepIndicator == true) {
+		if (isSleepIndicator() == true) {
 			System.out.println("J'ai sommeil " + name);
 		}
-		if (healthIndicator == true) {
+		if (isHealthIndicator() == true) {
 			System.out.println("Je suis soigné " + name);
 		}
-		if (healthIndicator == false && sleepIndicator == false && hungryIndicator == false) {
+		if (isHealthIndicator() == false && isSleepIndicator() == false && isHungryIndicator() == false) {
 			System.out.println(name);
 		}
 	}
@@ -218,32 +223,33 @@ public abstract class Animaux{
 	/**
 	 * Soigner les animaux
 	 */
-	public void beHealed(boolean healthIndicator) {
-		if (this.healthIndicator == false) {
-			this.healthIndicator = true;
-			System.out.println("Je suis guérri :" + this.healthIndicator);
+	public void beHealed() {
+		if (isHealthIndicator() == false) {
+			setHealthIndicator(true);
+			System.out.println("Je suis guérri :" + isHealthIndicator());
 		}
 	}
 
 	/**
 	 * Etat de sommeil des animaux
 	 */
-	public void sleepState(boolean sleepIndicator) {
-		if (this.sleepIndicator == true) {
-			this.sleepIndicator = false;
-			System.out.println( name + "va s'endormir : " + this.sleepIndicator);
+	public void sleepState() {
+		if (isSleepIndicator() == true) {
+			setSleepIndicator(false);
+			System.out.println( name + "va s'endormir : " + isSleepIndicator());
 		} else {
-			this.sleepIndicator = true;
-			System.out.println( name + "est en train de se reveiller : " + this.sleepIndicator);
+			setHealthIndicator(true);
+			System.out.println( name + "est en train de se reveiller : " + isSleepIndicator());
 		}
 
 	}
 
 	@Override
 	public String toString() {
-		return "Animaux [name=" + name + ", sexe=" + sexe + ", poids=" + poids + ", taille=" + taille + ", age=" + age
-				+ ", hungryIndicator=" + hungryIndicator + ", sleepIndicator=" + sleepIndicator + ", healthIndicator="
-				+ healthIndicator + "]";
+		return "Animaux { species = " + this.getSpecies() + " name= " + name +
+				", sexe= " + sexe + ", poids= " + poids + ", taille= " + taille + ", age= " + age
+				+ ", hungryIndicator= " + hungryIndicator + ", sleepIndicator= " + sleepIndicator + ", healthIndicator= "
+				+ healthIndicator + " }";
 	}
 
 }

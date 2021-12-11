@@ -18,7 +18,7 @@ public class Aigles extends Animaux implements Volants {
 	}
 
 	/**
-	 * Surcharge/ RÈÈcriture de la mÈthode reproduire
+	 * Surcharge/ R√©√©criture de la m√©thode reproduire
 	 */
 	@Override
 	public void reproduire() {
@@ -30,11 +30,18 @@ public class Aigles extends Animaux implements Volants {
 	}
 
 	/**
-	 * Surcharge/ RÈÈcriture de la mÈthode deplacement
+	 * Surcharge/ R√©√©criture de la m√©thode deplacement
 	 */
 	@Override
 	public void deplacement() {
 		System.out.println("Je peux voler");
 	}
+
+	/**
+	 * Esp√®ce de l'animal
+	 * @return string
+	 */
+	@Override
+	public String getSpecies() {return "Aigle";}
 
 }

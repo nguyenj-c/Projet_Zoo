@@ -19,7 +19,7 @@ public class Poissons_Rouges extends Animaux implements Marins {
 	}
 
 	/**
-	 * Surcharge/ Réécriture de la méthode reproduire
+	 * Surcharge/ RÃ©Ã©criture de la mÃ©thode reproduire
 	 */
 	@Override
 	public void reproduire() {
@@ -31,11 +31,17 @@ public class Poissons_Rouges extends Animaux implements Marins {
 	}
 
 	/**
-	 * Surcharge/ Réécriture de la méthode deplacement
+	 * Surcharge/ RÃ©Ã©criture de la mÃ©thode deplacement
 	 */
 	@Override
 	public void deplacement() {
 		System.out.println("Je peux nager");
 	}
-	
+
+	/**
+	 * EspÃ¨ce de l'animal
+	 * @return string
+	 */
+	@Override
+	public String getSpecies() {return "Poisson rouge";}
 }

@@ -9,11 +9,11 @@ package Animaux.Especes;
  */
 public interface Marins{
 	/**
-	 * DÈclaration de la mÈthode reproduire des marins
+	 * D√©claration de la m√©thode reproduire des marins
 	 */
 	public void reproduire();
 	/**
-	 * DÈclaration de la mÈthode reproduire des des marins
+	 * D√©claration de la m√©thode d√©placement des marins
 	 */
 	public void deplacement();
 
