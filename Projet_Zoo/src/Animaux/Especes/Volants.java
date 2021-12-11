@@ -10,11 +10,11 @@ package Animaux.Especes;
 public interface Volants{
 
 	/**
-	 * DÃ©claration de la mÃ©thode reproduire des volants
+	 * Déclaration de la méthode reproduire des volants
 	 */
 	public void reproduire();
 	/**
-	 * DÃ©claration de la mÃ©thode reproduire des volants
+	 * Déclaration de la méthode reproduire des volants
 	 */
 	public void deplacement();
 	

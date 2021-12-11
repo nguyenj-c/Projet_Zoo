@@ -16,7 +16,7 @@ public abstract class Enclos<T> {
 	private ArrayList<T> actualAnimals;
 
 	/**
-	 * Etat de propretÃ© de l'enclos
+	 * Etat de propreté de l'enclos
 	 */
 	private enum degreProprete {
 		mauvais, correct, bon
@@ -46,7 +46,7 @@ public abstract class Enclos<T> {
 	}
 
 	/**
-	 * Retourne l'Ã©tat actuel de l'enclos
+	 * Retourne l'état actuel de l'enclos
 	 * @return the actualProprete
 	 */
 	public degreProprete getActualProprete() {
@@ -54,7 +54,7 @@ public abstract class Enclos<T> {
 	}
 
 	/**
-	 * Change l'Ã©tat actuel de l'enclos
+	 * Change l'état actuel de l'enclos
 	 * @param actualProprete the actualProprete to set
 	 */
 	public void setActualProprete(degreProprete actualProprete) {
@@ -147,7 +147,7 @@ public abstract class Enclos<T> {
 	}
 
 	/**
-	 * Affiche les caractÃ©ristiques des animaux actuels
+	 * Affiche les caractéristiques des animaux actuels
 	 */
 	public void printAnimalsAttributs() {
 		System.out.println(toString());

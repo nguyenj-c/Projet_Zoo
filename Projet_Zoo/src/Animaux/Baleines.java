@@ -20,7 +20,7 @@ public class Baleines extends Animaux implements Marins {
 	}
 
 	/**
-	 * Surcharge/ RÃ©Ã©criture de la mÃ©thode reproduire
+	 * Surcharge/ Réécriture de la méthode reproduire
 	 */
 	@Override
 	public void reproduire() {
@@ -32,7 +32,7 @@ public class Baleines extends Animaux implements Marins {
 	}
 
 	/**
-	 * Surcharge/ RÃ©Ã©criture de la mÃ©thode deplacement
+	 * Surcharge/ Réécriture de la méthode deplacement
 	 */
 	@Override
 	public void deplacement() {

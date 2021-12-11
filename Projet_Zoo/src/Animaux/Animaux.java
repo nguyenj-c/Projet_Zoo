@@ -110,7 +110,7 @@ public abstract class Animaux{
 	}
 
 	/**
-	 * Retourne l'Ã¢ge de l'animal
+	 * Retourne l'age de l'animal
 	 * @return the age
 	 */
 	public int getAge() {
@@ -146,7 +146,7 @@ public abstract class Animaux{
 	}
 
 	/**
-	 * Retourne l'Ã©tat de sommeil de l'animal
+	 * Retourne l'état de sommeil de l'animal
 	 * @return the sleepIndicator
 	 */
 	public boolean isSleepIndicator() {
@@ -175,7 +175,7 @@ public abstract class Animaux{
 	}
 
 	/**
-	 * Change la santÃ© de l'animal
+	 * Change la santé de l'animal
 	 * @param healthIndicator the healthIndicator to set
 	 */
 	public void setHealthIndicator(boolean healthIndicator) {

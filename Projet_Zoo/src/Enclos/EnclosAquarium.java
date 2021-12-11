@@ -39,7 +39,7 @@ public class EnclosAquarium <T extends Marins> extends Enclos <T>{
 
 
 	/**
-	 * Change la salinitÃ© de l'eau
+	 * Change la salinité de l'eau
 	 * @param saliniteEau the saliniteEau to set
 	 */
 	public void setSaliniteEau(double saliniteEau) {

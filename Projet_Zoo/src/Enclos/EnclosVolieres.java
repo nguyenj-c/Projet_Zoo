@@ -26,7 +26,7 @@ public class EnclosVolieres <T extends Volants> extends Enclos <T>{
 	}
 
 	/**
-	 * Constructeur de volières
+	 * Constructeur de volieres
 	 * @param taille
 	 */
 	public EnclosVolieres(int taille) {
