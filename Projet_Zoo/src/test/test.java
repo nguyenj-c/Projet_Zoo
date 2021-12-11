@@ -2,9 +2,11 @@
  * 
  */
 package test;
+import java.util.Random;
+
 import Animaux.*;
 import Enclos.Enclos;
-import Enclos.EnclosNormal;
+
 
 /**
  * @author n19004502
@@ -17,15 +19,15 @@ public class test {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Tigres tigre1 = new Tigres("tigre",false,60,160,10);
-		Pingouins pingouin1 = new Pingouins("pingouin",true,80,60,80);
-		Ours our1 = new Ours("ours",false,180,180,20);
-		tigre1.eat(true);
-		tigre1.beHealed(true);
+		Tigres tigre1 = new Tigres("tigre",10);
+		Pingouins pingouin1 = new Pingouins("pingouin",80);
+		Ours our1 = new Ours("ours",20);
+		tigre1.eat();
+		tigre1.beHealed();
 		tigre1.deplacement();
 		tigre1.reproduire();
-		Enclos<Animaux> enclos1 = new EnclosNormal <Animaux>("test",100,10);
-		Enclos<Animaux> enclos2 = new EnclosNormal <Animaux>("test2",100,10);
+		Enclos enclos1 = new Enclos ("test",100,10);
+		Enclos enclos2 = new Enclos ("test2",100,10);
 		enclos1.ajouter(tigre1);
 		enclos1.ajouter(pingouin1);
 		enclos1.ajouter(our1);
