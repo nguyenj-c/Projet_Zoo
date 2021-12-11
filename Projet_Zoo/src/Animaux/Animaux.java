@@ -191,7 +191,7 @@ public abstract class Animaux{
 	 * Voit si l'animal a faim ou pas et ainsi l'animal mange
 	 * @param healthIndicator the healthIndicator to set
 	 */
-	public boolean eat(boolean hungryIndicator) {
+	public boolean eat() {
 		if (isSleepIndicator() == false && isHungryIndicator() == true) {
 			setHungryIndicator(false);
 			System.out.println("Je mange" + name);
