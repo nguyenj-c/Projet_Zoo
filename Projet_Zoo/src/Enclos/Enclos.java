@@ -8,12 +8,12 @@ import java.util.*;
 
 import Animaux.Animaux;
 
-public abstract class Enclos<T> {
+public abstract class Enclos {
 	private String name;
 	private double supercifie;
 	private int maxAnimals;
 	private int nbAnimals;
-	private ArrayList<T> actualAnimals;
+	private ArrayList<Animaux> actualAnimals;
 
 	/**
 	 * Etat de propreté de l'enclos
@@ -41,7 +41,7 @@ public abstract class Enclos<T> {
 		this.supercifie = supercifie;
 		this.maxAnimals = maxAnimals;
 		this.nbAnimals = 0;
-		this.actualAnimals = new ArrayList<T>();
+		this.actualAnimals = new ArrayList<Animaux>();
 		actualProprete = degreProprete.bon;
 	}
 
@@ -128,7 +128,7 @@ public abstract class Enclos<T> {
 	 * Retourne une liste des animaux actuelles dans l'enclos
 	 * @return the actualAnimals
 	 */
-	public List<T> getActualAnimals() {
+	public List<Animaux> getActualAnimals() {
 		return actualAnimals;
 	}
 
@@ -136,7 +136,7 @@ public abstract class Enclos<T> {
 	 * Change la liste des animaux actuelles dans l'enclos
 	 * @param actualAnimals the actualAnimals to set
 	 */
-	public void setActualAnimals(ArrayList<T> actualAnimals) {
+	public void setActualAnimals(ArrayList<Animaux> actualAnimals) {
 		this.actualAnimals = actualAnimals;
 	}
 
@@ -158,7 +158,7 @@ public abstract class Enclos<T> {
 	 * Permet d'ajouter des animaux de l'enclos
 	 * @param espece
 	 */
-	public void ajouter(T espece) {
+	public void ajouter(Animaux espece) {
 		if (getNbAnimals() == getMaxAnimals()) {
 			System.out.println("Enclos dÃ©ja plein, on ne peu plus rajouter " + ((Animaux) espece).getName() + " ("
 					+ getNbAnimals() + "/" + getMaxAnimals() + ")");
@@ -174,9 +174,9 @@ public abstract class Enclos<T> {
 	 * Permet d'enlever les animaux de l'enclos
 	 * @param espece
 	 */
-	public void enlever(T espece) {
+	public void enlever(Animaux espece) {
 		if (getNbAnimals() == 0) {
-			System.out.println("Enclos vide donc pad d'animaux Ã  enlever");
+			System.out.println("Enclos vide donc pad d'animaux à  enlever");
 		} else {
 			for (int i = 0; i <= actualAnimals.size() - 1; i++) {
 				if (actualAnimals.get(i) == espece) {
