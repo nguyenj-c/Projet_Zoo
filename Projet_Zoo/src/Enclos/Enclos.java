@@ -16,9 +16,9 @@ public abstract class Enclos<T> {
 	private ArrayList<T> actualAnimals;
 
 	/**
-	 * Etat de propret� de l'enclos
+	 * Etat de propreté de l'enclos
 	 */
-	private enum degreProprete {
+	public enum degreProprete {
 		mauvais, correct, bon
 	}
 
@@ -46,7 +46,7 @@ public abstract class Enclos<T> {
 	}
 
 	/**
-	 * Retourne l'�tat actuel de l'enclos
+	 * Retourne l'état actuel de l'enclos
 	 * @return the actualProprete
 	 */
 	public degreProprete getActualProprete() {
@@ -54,7 +54,7 @@ public abstract class Enclos<T> {
 	}
 
 	/**
-	 * Change l'�tat actuel de l'enclos
+	 * Change l'état actuel de l'enclos
 	 * @param actualProprete the actualProprete to set
 	 */
 	public void setActualProprete(degreProprete actualProprete) {
@@ -147,7 +147,7 @@ public abstract class Enclos<T> {
 	}
 
 	/**
-	 * Affiche les caract�ristiques des animaux actuels
+	 * Affiche les caractéristiques des animaux actuels
 	 */
 	public void printAnimalsAttributs() {
 		System.out.println(toString());
@@ -160,12 +160,12 @@ public abstract class Enclos<T> {
 	 */
 	public void ajouter(T espece) {
 		if (getNbAnimals() == getMaxAnimals()) {
-			System.out.println("Enclos déja plein, on ne peu plus rajouter " + ((Animaux) espece).getName() + " ("
+			System.out.println("Enclos dÃ©ja plein, on ne peu plus rajouter " + ((Animaux) espece).getName() + " ("
 					+ getNbAnimals() + "/" + getMaxAnimals() + ")");
 		} else {
 			actualAnimals.add(espece);
 			this.nbAnimals += 1;
-			System.out.println(((Animaux) espece).getName() + " est ajouter à l'enclos " + "(" + getNbAnimals() + "/"
+			System.out.println(((Animaux) espece).getName() + " est ajouter Ã  l'enclos " + "(" + getNbAnimals() + "/"
 					+ getMaxAnimals() + ")");
 		}
 	}
@@ -176,7 +176,7 @@ public abstract class Enclos<T> {
 	 */
 	public void enlever(T espece) {
 		if (getNbAnimals() == 0) {
-			System.out.println("Enclos vide donc pad d'animaux à enlever");
+			System.out.println("Enclos vide donc pad d'animaux Ã  enlever");
 		} else {
 			for (int i = 0; i <= actualAnimals.size() - 1; i++) {
 				if (actualAnimals.get(i) == espece) {
@@ -192,9 +192,9 @@ public abstract class Enclos<T> {
 	 * Permet de nourrir les animaux de l'enclos
 	 */
 	public void feedAnimals() {
-		for (T animals : actualAnimals) {
+		for (Animaux animals : actualAnimals) {
 			if (((Animaux) animals).isHungryIndicator() == true) {
-				((Animaux) animals).eat(true);
+				((Animaux) animals).eat();
 				System.out.println("Je nourris les " + animals);
 			} else {
 				System.out.println("Ils ont pas faim " + animals);
