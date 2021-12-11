@@ -6,7 +6,7 @@ package Enclos;
 
 import Animaux.Especes.Volants;
 
-public class EnclosVolieres <T extends Volants> extends Enclos <T>{
+public class EnclosVolieres <T extends Volants> extends Enclos{
 	private int taille;
 
 	/**
