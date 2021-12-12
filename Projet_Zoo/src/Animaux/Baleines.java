@@ -12,10 +12,9 @@ public class Baleines extends Animaux implements Marins {
 	/**
 	 * Constructeur de baleines
 	 * @param name
-	 * @param age
 	 */
-	public Baleines(String name, int age) {
-		super(name,  age);
+	public Baleines(String name) {
+		super(name);
 		// TODO Auto-generated constructor stub
 	}
 
