@@ -11,10 +11,9 @@ public class Poissons_Rouges extends Animaux implements Marins {
 	/**
 	 * Constructeur de poissons rouges
 	 * @param name
-	 * @param age
 	 */
-	public Poissons_Rouges(String name, int age) {
-		super(name, age);
+	public Poissons_Rouges(String name) {
+		super(name);
 		// TODO Auto-generated constructor stub
 	}
 
