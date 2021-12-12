@@ -91,22 +91,6 @@ public class Zoo {
 		return tList;
 	}
 
-
-	/**
-	 * Change les paramètres d'affichages du Zoo
-	 * @return
-	 */
-	@Override
-	public String toString() {
-		return "Zoo {" +
-				"name = " + this.name +
-				", employe = " + this.employe +
-				", maxEnclos = " + this.maxEnclos +
-				", enclos = " + this.list_enclos +
-				"}";
-	}
-
-
 	/**
 	 * Renvoie l'enclos ou se situe l'animal
 	 * @param targetAnimal
@@ -119,6 +103,24 @@ public class Zoo {
 			}
 		}
 		return null;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "Zoo { " + "name = " + this.name + ", employe = " + this.employe + 
+				", maxEnclos = " + this.maxEnclos + ", enclos = " + this.list_enclos + " }";
+	}
+	public void getNameZoo() {
+		System.out.println("Quel est le nom de votre Zoo ?");
+	}
+
+	public void getMaxEnclosure() {
+		System.out.println("Combien d'enclos au maximum autorisez vous dans votre Zoo ?");
+	}
+
+	public void successZoo() {
+		System.out.println("Le Zoo à correctement été créé !\n");
 	}
 }
 
