@@ -13,8 +13,8 @@ public class Requins extends Animaux implements Marins {
 	 * @param name
 	 * @param age
 	 */
-	public Requins(String name, int age) {
-		super(name, age);
+	public Requins(String name) {
+		super(name);
 		// TODO Auto-generated constructor stub
 	}
 
