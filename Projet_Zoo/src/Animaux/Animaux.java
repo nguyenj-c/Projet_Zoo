@@ -40,7 +40,7 @@ public abstract class Animaux{
 		this.sexe = r.nextBoolean();
 		this.poids = r.nextFloat() * 100;
 		this.taille = r.nextFloat() * 100;
-		this.age = age;
+		this.age = r.nextInt(100 - 0) + 0;
 		this.hungryIndicator = false;
 		this.sleepIndicator = false;
 		this.healthIndicator = true;
