@@ -38,7 +38,27 @@ public class initGame {
                 "4 - Règles du jeu\n" +
                 "5 - Quitter la partie");
     }
-    
+    public void menu() {
+	 mainMenu();
+	 Scanner scanner = new Scanner(System.in);
+         int selected = scanner.nextInt();
+	 switch (selected) {
+	     case 1:
+		Animaux.menu();
+		break;
+	     case 2:
+		Enclos.menu();
+		break;
+	     case 3:
+			
+		break;
+	     case 4:
+		endGame();
+		break;
+	     default:
+		throw new IllegalArgumentException("Sélection en dehors du menu.");
+	}
+    }
     public void start() {
     	startGame();
 		Scanner scanner = new Scanner(System.in);
