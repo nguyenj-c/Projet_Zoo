@@ -11,10 +11,9 @@ public class Ours extends Animaux implements Mammiferes {
 	/**
 	 * Constructeur d'ours
 	 * @param name
-	 * @param age
 	 */
-	public Ours(String name, int age) {
-		super(name, age);
+	public Ours(String name) {
+		super(name);
 		// TODO Auto-generated constructor stub
 	}
 
