@@ -34,7 +34,7 @@ public abstract class Animaux{
 	 */
 	public abstract String getSpecies();
 
-	public Animaux(String name, int age) {
+	public Animaux(String name) {
 		Random r = new Random();
 		this.name = name;
 		this.sexe = r.nextBoolean();
