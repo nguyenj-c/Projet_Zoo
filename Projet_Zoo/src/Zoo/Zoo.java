@@ -67,8 +67,58 @@ public class Zoo {
 		}
 		this.list_enclos.remove(enclos);
 	}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	/**
+	 * Renvoie la liste de tous les enclos du Zoo
+	 * @return
+	 */
+	public List<Enclos> getAllEnclosures() {
+		return list_enclos;
+	}
 
+	/**
+	 * Renvoie la liste des enclos par type d'enclos
+	 * @param type
+	 * @param <T>
+	 * @return List
+	 */
+	public <T extends Enclos> List<T> getEnclosuresByType(Class<T> type) {
+		List<T> tList = new ArrayList<>();
+		for (Enclos allEnclos : getAllEnclosures()) {
+			if(allEnclos.getClass().equals(type)) {
+				tList.add((T) allEnclos);
+			}
+		}
+		return tList;
+	}
+
+
+	/**
+	 * Change les paramètres d'affichages du Zoo
+	 * @return
+	 */
+	@Override
+	public String toString() {
+		return "Zoo {" +
+				"name = " + this.name +
+				", employe = " + this.employe +
+				", maxEnclos = " + this.maxEnclos +
+				", enclos = " + this.list_enclos +
+				"}";
+	}
+
+
+	/**
+	 * Renvoie l'enclos ou se situe l'animal
+	 * @param targetAnimal
+	 * @return
+	 */
+	public Enclos getEnclosureOf(Animaux targetAnimal) {
+		for (Enclos enclos : list_enclos) {
+			if(enclos.getActualAnimals().contains(targetAnimal)){
+				return enclos;
+			}
+		}
+		return null;
 	}
 }
+
