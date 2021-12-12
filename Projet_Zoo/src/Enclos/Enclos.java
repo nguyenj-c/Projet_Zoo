@@ -140,12 +140,6 @@ public class Enclos {
 		this.actualAnimals = actualAnimals;
 	}
 
-	@Override
-	public String toString() {
-		return "Enclos { name=" + name + ", supercifie=" + supercifie + ", maxAnimals=" + maxAnimals + ", nbAnimals="
-				+ nbAnimals + ", actualAnimals=" + actualAnimals + " }";
-	}
-
 	/**
 	 * Affiche les caractéristiques des animaux actuels
 	 */
@@ -215,4 +209,35 @@ public class Enclos {
 			System.out.println("Etat enclos : " + getActualProprete() + ", Nb animals : " + getNbAnimals());
 		}
 	}
+		public static void menu() {
+		System.out.println("\nMenu de gestion des enclos :\n" + "1 - Créer un nouvel enclos\n"
+				+ "2 - Examiner un enclos\n" + "3 - Ajouter un animal à un enclos\n"
+				+ "4 - Supprimer un animal d'un enclos\n" + "5 - Transférer les animaux d'un enclos à un autre\n"
+				+ "6 - Nettoyer un enclos\n" + "7 - Nourrir les animaux d'un enclos\n"
+				+ "8 - Consulter les informations d'un enclos\n" + "9 - Retour");
+	}
+	
+	@Override
+	public String toString() {
+		return "Enclos { name=" + name + ", supercifie=" + superficie + ", maxAnimals=" + maxAnimals + ", nbAnimals="
+				+ nbAnimals + ", actualAnimals=" + actualAnimals + " }";
+	}
+	
+	public static void menuCreateEnclosure() {
+		System.out.println("Création d'un nouvel enclos.\n" + "Quel type d'enclos voulez vous ajouter au Zoo ?\n"
+				+ "1 - Un enclos normal\n" + "2 - Une volière\n" + "3 - Un aquarium");
+	}
+
+	public static void getNameEnclosure() {
+		System.out.println("Quel nom voulez vous donner à l'enclos ?");
+	}
+
+	public static void getAreaEnclosure() {
+		System.out.println("Quel est la superficie de l'enclos ?");
+	}
+
+	public static void getMaxAnimalsEnclosure() {
+		System.out.println("Quel est le nombre maximal d'animaux pouvant être mit dans l'enclos ?");
+	}
+
 }
