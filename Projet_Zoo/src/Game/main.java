@@ -11,6 +11,9 @@ public class main {
     
 	public static void main(String[] args) {
 		initGame.start();
+        	while (initGame.isGame()) {
+            		initGame.menu();
+        	}
 	}
 
 }
