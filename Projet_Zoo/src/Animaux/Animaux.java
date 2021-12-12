@@ -251,5 +251,89 @@ public abstract class Animaux{
 				+ ", hungryIndicator= " + hungryIndicator + ", sleepIndicator= " + sleepIndicator + ", healthIndicator= "
 				+ healthIndicator + " }";
 	}
+		public static void affichageMenu() {
+		System.out.println(
+				"\nMenu de gestion des animaux :\n" + "1 - Créer un nouvel animal\n" + "2 - Soigner un animal\n"
+						+ "3 - Nourrir un animal\n" + "4 - Consulter les informations d'un animal\n" + "5 - Retour");
+	}
+
+	public static void affichageMenuCreateAnimal() {
+		System.out.println("Création d'un nouvel animal.\n" + "Quel type d'animal voulez vous ajouter au Zoo ?\n"
+				+ "1 - Un Aigle\n" + "2 - Une Baleine\n" + "3 - Un Loup\n" + "4 - Un Ours\n" + "5 - Un Pingouin\n"
+				+ "6 - Un Poisson rouge\n" + "7 - Un Requin\n" + "8 - Un Tigre\n");
+	}
+
+	public static void getNameAnimal() {
+		System.out.println("Quel nom voulez vous donner à  l'animal ?");
+	}
+
+	public static void successCreate() {
+		System.out.println("L'animal a Ã©tÃ© correctement créé.");
+	}
+
+	public static void getTypeAnimal() {
+		System.out.println("Quel type d'animal voulez vous sélectionner ?\n" + "1 - Un Aigle\n" + "2 - Une Baleine\n"
+				+ "3 - Un Loup\n" + "4 - Un Ours\n" + "5 - Un Pingouin\n" + "6 - Un Poisson rouge\n" + "7 - Un Requin\n"
+				+ "8 - Un Tigre\n");
+	}
+
+	public static void getAnimal() {
+		System.out.println("Quel animal voulez vous sélectionner ?");
+	}
+
+	public static void menu() {
+		affichageMenu();
+		Scanner scanner = new Scanner(System.in);
+		int selected = scanner.nextInt();
+		switch (selected) {
+		case 1:
+			menuCreateAnimal();
+			break;
+		case 2:
+			initGame.menu();
+			break;
+		default:
+			throw new IllegalArgumentException("Sélection en dehors du menu.");
+		}
+	}
+
+	public static void menuCreateAnimal() {
+		affichageMenuCreateAnimal();
+		Scanner scanner = new Scanner(System.in);
+		int selected = scanner.nextInt();
+		getNameAnimal();
+		String nameAnimal = scanner.next();
+		switch (selected) {
+		case 1:
+			new Aigles(nameAnimal);
+			break;
+		case 2:
+			new Baleines(nameAnimal);
+			break;
+		case 3:
+			new Loups(nameAnimal);
+			break;
+		case 4:
+			new Ours(nameAnimal);
+			break;
+		case 5:
+			new Pingouins(nameAnimal);
+			break;
+		case 6:
+			new Poissons_Rouges(nameAnimal);
+			break;
+		case 7:
+			new Requins(nameAnimal);
+			break;
+		case 8:
+			new Tigres(nameAnimal);
+			break;
+		default:
+			throw new IllegalArgumentException("Sélection en dehors du menu.");
+		}
+		successCreate();
+	}
+}
+
 
 }
