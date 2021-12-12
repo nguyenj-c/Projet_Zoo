@@ -13,7 +13,7 @@ public class Aigles extends Animaux implements Volants {
 	 * @param name
 	 */
 	public Aigles(String name) {
-		super(name, age);
+		super(name);
 	}
 
 	/**
