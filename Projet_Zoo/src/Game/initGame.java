@@ -7,19 +7,40 @@ import Zoo.Zoo;
 
 public class initGame {
 	
+
+    private boolean game = true;
     public initGame() {}
     
-    public void accueil() {
+    public void startGame() {
         System.out.println("Bienvenue dans la simulation de Zoo !\n\n" +
-        		"Voici les règles du jeu :\n" +
-                "- Vous êtes l'employé du Zoo et vous devez vous occuper des animaux et des enclos qui le constitue,\n" +
-                "- Lorsque vous faite 5 actions, certains éléments du Zoo sont susceptible de changer (un animal devient malade, une cage devient sale, etc),\n" +
+        		"Voici les rÃ¨gles du jeu :\n" +
+                "- Vous Ãªtes l'employÃ© du Zoo et vous devez vous occuper des animaux et des enclos qui le constitue,\n" +
+                "- Lorsque vous faite 5 actions, certains Ã©lÃ©ments du Zoo sont susceptible de changer (un animal devient malade, une cage devient sale, etc),\n" +
                 "- C'est alors a vous d'analyser les animaux et les cages pour voir si tout vas bien.\n" +
                 "Amusez vous bien !\n" +
-                "Pour commencer, nous allons créer un employé qui sera chargé de gérer et de s'occuper du Zoo.");
+                "Pour commencer, nous allons crÃ©er un employÃ© qui sera chargÃ© de gÃ©rer et de s'occuper du Zoo.");
     }
+    
+    public void endGame() {
+    	System.out.println("Voulez-vous vraiment quitter la partie ? (Oui ou Non)");
+		Scanner scanner = new Scanner(System.in);
+        String selected = scanner.next();
+        if (selected.equals("Oui")) {
+            this.game = false;
+            System.out.println("Fin de la partie ! Merci d'avoir jouÃ©.");
+        }
+    }
+    public void mainMenu() {
+        System.out.println("\nMenu principal :\n" +
+                "1 - Gestion des animaux\n" +
+                "2 - Gestion des enclos\n" +
+                "3 - Informations du Zoo\n" +
+                "4 - RÃ¨gles du jeu\n" +
+                "5 - Quitter la partie");
+    }
+    
     public void start() {
-		accueil();
+    	startGame();
 		Scanner scanner = new Scanner(System.in);
 		Employe.getNameEmploye();
 		String nameEmploye = scanner.next();
@@ -31,7 +52,7 @@ public class initGame {
         } else if (sexe.equals("Femme")) {
             sexe1 = false;
         } else {
-            throw new IllegalArgumentException("Le sexe de l'employé n'a pas été correctement renseigné.");
+            throw new IllegalArgumentException("Le sexe de l'employÃ© n'a pas Ã©tÃ© correctement renseignÃ©.");
         }
 		Employe.getAgeEmploye();
         int ageEmploye = scanner.nextInt();
