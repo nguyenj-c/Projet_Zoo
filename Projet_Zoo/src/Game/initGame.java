@@ -20,7 +20,7 @@ public class initGame {
                 "Amusez vous bien !\n" +
                 "Pour commencer, nous allons créer un employé qui sera chargé de gérer et de s'occuper du Zoo.");
     }
-    
+    public boolean isGame() {return game;}
     public void endGame() {
     	System.out.println("Voulez-vous vraiment quitter la partie ? (Oui ou Non)");
 		Scanner scanner = new Scanner(System.in);
