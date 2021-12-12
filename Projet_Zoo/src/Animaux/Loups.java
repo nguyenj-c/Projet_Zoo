@@ -11,10 +11,9 @@ public class Loups extends Animaux implements Mammiferes {
 	/**
 	 * Constructeur de loups
 	 * @param name
-	 * @param age
 	 */
-	public Loups(String name, int age) {
-		super(name, age);
+	public Loups(String name) {
+		super(name);
 		// TODO Auto-generated constructor stub
 	}
 
