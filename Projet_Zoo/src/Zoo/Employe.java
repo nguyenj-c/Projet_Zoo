@@ -107,12 +107,7 @@ public class Employe {
 		enclos.maintenance();
 		
 	}
-	
-	@Override
-	public String toString() {
-		return "Employe { name= " + name + ", sexe= " + sexe + ", age= " + age + " }";
-	}
-	
+		
 	/**
 	 * Permet à l'employé(e) de nourrir les animaux d'un enclos
 	 * @param enclos
@@ -144,4 +139,26 @@ public class Employe {
 		enclosDestination.ajouter(animal);
 		System.out.println("L'animal à été transféré dans l'enclos " + enclosDestination.getName() +" .");
 	}
+	
+	@Override
+	public String toString() {
+		return "Employe { name= " + name + ", sexe= " + sexe + ", age= " + age + " }";
+	}
+	
+        public static void getNameEmploye() {
+                System.out.println("Quel est le nom de votre employé ?");
+        }
+
+        public static void getSexEmploye() {
+                System.out.println("Quel est le sexe de votre employé ? (Homme ou Femme)");
+        }
+
+        public static void getAgeEmploye() {
+                System.out.println("Quel est l'age de votre employé ?");
+        }
+        public static void successEmploye() {
+                System.out.println("L'employé à été créé !\n" +
+                                   "Nous allons maintenant créer le Zoo.");
+        }
 }
+
