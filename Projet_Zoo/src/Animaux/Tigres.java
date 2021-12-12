@@ -11,10 +11,9 @@ public class Tigres extends Animaux implements Mammiferes {
 	/**
 	 * Constructeur de tigres
 	 * @param name
-	 * @param age
 	 */
-	public Tigres(String name, int age) {
-		super(name, age);
+	public Tigres(String name) {
+		super(name);
 		// TODO Auto-generated constructor stub
 	}
 
