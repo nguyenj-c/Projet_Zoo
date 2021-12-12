@@ -11,7 +11,7 @@ import Enclos.Enclos.degreProprete;
 public class Employe {
 	
 	private String name;
-	private String sexe;
+	private boolean sexe;
 	private int age;
 	
 	/**
@@ -20,7 +20,7 @@ public class Employe {
 	 * @param sexe
 	 * @param age
 	 */
-	public Employe(String name, String sexe, int age) {
+	public Employe(String name, boolean sexe, int age) {
 		if (name == null || name.isBlank()) {
 			throw new IllegalArgumentException("Le nom de l'employé ne peut pas être vide.");
 		}
@@ -49,14 +49,14 @@ public class Employe {
 	 * Retourne le sexe de l'employé(e)
 	 * @return the sexe
 	 */
-	public String getSexe() {
+	public boolean getSexe() {
 		return sexe;
 	}
 	/**
 	 * Change le sexe de l'employé(e)
 	 * @param sexe the sexe to set
 	 */
-	public void setSexe(String sexe) {
+	public void setSexe(boolean sexe) {
 		this.sexe = sexe;
 	}
 	/**
