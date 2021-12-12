@@ -11,9 +11,8 @@ public class Aigles extends Animaux implements Volants {
 	/**
 	 * Constructeur d'aigles
 	 * @param name
-	 * @param age
 	 */
-	public Aigles(String name, int age) {
+	public Aigles(String name) {
 		super(name, age);
 	}
 
