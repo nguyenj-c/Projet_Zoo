@@ -111,16 +111,16 @@ public class Zoo {
 		return "Zoo { " + "name = " + this.name + ", employe = " + this.employe + 
 				", maxEnclos = " + this.maxEnclos + ", enclos = " + this.list_enclos + " }";
 	}
-	public void getNameZoo() {
+	public static void getNameZoo() {
 		System.out.println("Quel est le nom de votre Zoo ?");
 	}
 
-	public void getMaxEnclosure() {
+	public static void getMaxEnclosure() {
 		System.out.println("Combien d'enclos au maximum autorisez vous dans votre Zoo ?");
 	}
 
-	public void successZoo() {
-		System.out.println("Le Zoo à correctement été créé !\n");
+	public static void successZoo() {
+		System.out.println("Le Zoo à  correctement été crée !\n");
 	}
 }
 
