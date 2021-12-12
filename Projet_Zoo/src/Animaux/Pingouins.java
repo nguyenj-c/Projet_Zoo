@@ -12,10 +12,9 @@ public class Pingouins extends Animaux implements Volants, Marins {
 	/**
 	 * Constructeur de pingouins
 	 * @param name
-	 * @param age
 	 */
-	public Pingouins(String name, int age) {
-		super(name, age);
+	public Pingouins(String name) {
+		super(name);
 		// TODO Auto-generated constructor stub
 	}
 
