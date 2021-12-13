@@ -20,18 +20,18 @@ public class Zoo {
 	/**
 	 * Constructeur de Zoo
 	 * @param name
-	 * @param employee
+	 * @param employe
 	 * @param maxEnclos
 	 */
 	public Zoo(String name, Employe employe, int maxEnclos) {
 		if (name == null || name.isBlank()) {
-			throw new IllegalArgumentException("Le nom du Zoo ne peut pas Ãªtre vide.");
+			throw new IllegalArgumentException("Le nom du Zoo ne peut pas être vide.");
 		}
 		if (employe == null) {
-			throw new IllegalArgumentException("L'employÃ© ne peut pas Ãªtre null.");
+			throw new IllegalArgumentException("L'employé ne peut pas Ãªtre null.");
 		}
 		if (maxEnclos <= 0d) {
-			throw new IllegalArgumentException("Le nombre maximal d'enclos doit Ãªtre supÃ©rieur Ã  zÃ©ro.");
+			throw new IllegalArgumentException("Le nombre maximal d'enclos doit Ãªtre supérieur à  zéro.");
 		}
 		this.name = name;
 		this.employe = employe;
@@ -58,7 +58,7 @@ public class Zoo {
 	 */
 	public void removeEnclos(Enclos enclos) {
 		if (enclos == null) {
-			throw new IllegalArgumentException("L'enclos ne peut pas Ãªtre null.");
+			throw new IllegalArgumentException("L'enclos ne peut pas être null.");
 		}
 		if (!this.list_enclos.contains(enclos)) {
 			throw new IllegalArgumentException("L'enclos n'existe pas.");
@@ -83,13 +83,13 @@ public class Zoo {
 	 * @return List
 	 */
 	public <T extends Enclos> List<T> getEnclosByType(Class<T> type) {
-		List<T> tList = new ArrayList<>();
+		List<T> typeList = new ArrayList<>();
 		for (Enclos allEnclos : getAllEnclos()) {
 			if(allEnclos.getClass().equals(type)) {
 				tList.add((T) allEnclos);
 			}
 		}
-		return tList;
+		return typeList;
 	}
 
 	/**
