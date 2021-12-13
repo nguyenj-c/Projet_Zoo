@@ -43,7 +43,7 @@ public class Zoo {
 	 * Ajoute un enclos au Zoo
 	 * @param enclos
 	 */
-	public void addEnclosure(Enclos enclos) {
+	public void addEnclos(Enclos enclos) {
 		if (enclos == null) {
 			throw new IllegalArgumentException("L'enclos ne peut pas être null.");
 		}
@@ -56,7 +56,7 @@ public class Zoo {
 	 * Supprime un enclos du zoo
 	 * @param enclos
 	 */
-	public void removeEnclosure(Enclos enclos) {
+	public void removeEnclos(Enclos enclos) {
 		if (enclos == null) {
 			throw new IllegalArgumentException("L'enclos ne peut pas Ãªtre null.");
 		}
@@ -72,7 +72,7 @@ public class Zoo {
 	 * Renvoie la liste de tous les enclos du Zoo
 	 * @return
 	 */
-	public List<Enclos> getAllEnclosures() {
+	public List<Enclos> getAllEnclos() {
 		return list_enclos;
 	}
 
@@ -82,9 +82,9 @@ public class Zoo {
 	 * @param <T>
 	 * @return List
 	 */
-	public <T extends Enclos> List<T> getEnclosuresByType(Class<T> type) {
+	public <T extends Enclos> List<T> getEnclosByType(Class<T> type) {
 		List<T> tList = new ArrayList<>();
-		for (Enclos allEnclos : getAllEnclosures()) {
+		for (Enclos allEnclos : getAllEnclos()) {
 			if(allEnclos.getClass().equals(type)) {
 				tList.add((T) allEnclos);
 			}
@@ -97,7 +97,7 @@ public class Zoo {
 	 * @param targetAnimal
 	 * @return
 	 */
-	public Enclos getEnclosureOf(Animaux targetAnimal) {
+	public Enclos getEnclosOf(Animaux targetAnimal) {
 		for (Enclos enclos : list_enclos) {
 			if(enclos.getActualAnimals().contains(targetAnimal)){
 				return enclos;
@@ -116,7 +116,7 @@ public class Zoo {
 		System.out.println("Quel est le nom de votre Zoo ?");
 	}
 
-	public static void getMaxEnclosure() {
+	public static void getMaxEnclos() {
 		System.out.println("Combien d'enclos au maximum autorisez vous dans votre Zoo ?");
 	}
 
