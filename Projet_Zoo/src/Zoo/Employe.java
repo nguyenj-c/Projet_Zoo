@@ -24,7 +24,7 @@ public class Employe {
 		if (name == null || name.isBlank()) {
 			throw new IllegalArgumentException("Le nom de l'employé ne peut pas être vide.");
 		}
-		if (age <= 18) {
+		if (age < 18) {
 			throw new IllegalArgumentException("L'employé doit être majeur. L'âge doit être supérieur ou équal à 18.");
 		}
 		this.name = name;
