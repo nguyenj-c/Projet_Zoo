@@ -133,7 +133,14 @@ public class Enclos {
 	public List<Animaux> getActualAnimals() {
 		return actualAnimals;
 	}
-
+	
+	/**
+	 * Retourne la taille liste des animaux actuelles dans l'enclos
+	 * @return the size of actualAnimals
+	 */
+	public int getActualAnimalsSize() {
+		return actualAnimals.size();
+	}
 	/**
 	 * Change la liste des animaux actuelles dans l'enclos
 	 * @param actualAnimals the actualAnimals to set
