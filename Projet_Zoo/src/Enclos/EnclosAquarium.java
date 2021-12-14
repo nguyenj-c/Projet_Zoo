@@ -4,6 +4,8 @@
  */
 package Enclos;
 
+import java.util.Random;
+
 import Animaux.Animaux;
 import Animaux.Especes.Marins;
 
