@@ -45,7 +45,18 @@ public class EnclosAquarium extends Enclos{
 	public void setSaliniteEau(double saliniteEau) {
 		this.saliniteEau = saliniteEau;
 	}
-
+	
+    /**
+     * Permet de savoir si un animal est compatible avec l'enclos
+     * @param animal
+     * @return true s'il est compatible, false sinon
+     */
+    public boolean isCompatible(Animaux animal) {
+        if(animal == null) {
+            throw new IllegalArgumentException("L'animal ne peut pas être vide.");
+        }
+        return animal instanceof Marins;
+    }
 
 	/**
 	 * Constructeur d'aquarium
