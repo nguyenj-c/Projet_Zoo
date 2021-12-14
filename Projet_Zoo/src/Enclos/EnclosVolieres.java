@@ -8,13 +8,13 @@ import Animaux.Animaux;
 import Animaux.Especes.Volants;
 
 public class EnclosVolieres extends Enclos{
-	private int taille;
+	private double taille;
 
 	/**
 	 * Retourne la taille de la volieres
 	 * @return the taille
 	 */
-	public int getTaille() {
+	public double getTaille() {
 		return taille;
 	}
 
@@ -22,7 +22,7 @@ public class EnclosVolieres extends Enclos{
 	 * Change la taille de la volieres
 	 * @param taille the taille to set
 	 */
-	public void setTaille(int taille) {
+	public void setTaille(double taille) {
 		this.taille = taille;
 	}
 	/**
@@ -44,7 +44,7 @@ public class EnclosVolieres extends Enclos{
 	 * @param maxAnimals
 	 * @param taille
 	 */
-	public EnclosVolieres(String name, double superficie, int maxAnimals, int taille) {
+	public EnclosVolieres(String name, double superficie, int maxAnimals, double taille) {
 		super(name, superficie, maxAnimals);
 		this.taille = taille;
 	}	
