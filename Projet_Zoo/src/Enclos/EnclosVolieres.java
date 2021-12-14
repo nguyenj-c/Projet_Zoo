@@ -6,7 +6,7 @@ package Enclos;
 
 import Animaux.Especes.Volants;
 
-public class EnclosVolieres <T extends Volants> extends Enclos{
+public class EnclosVolieres extends Enclos{
 	private int taille;
 
 	/**
@@ -24,6 +24,17 @@ public class EnclosVolieres <T extends Volants> extends Enclos{
 	public void setTaille(int taille) {
 		this.taille = taille;
 	}
+	/**
+     * Permet de savoir si un animal est compatible avec l'enclos
+     * @param animal
+     * @return true s'il est compatible, false sinon
+     */
+    public boolean isCompatible(Animaux animal) {
+        if(animal == null) {
+            throw new IllegalArgumentException("L'animal ne peut pas être vide.");
+        }
+        return animal instanceof Volants;
+    }
 
 	/**
 	 * Constructeur de volieres
