@@ -4,6 +4,7 @@
  */
 package Enclos;
 
+import Animaux.Animaux;
 import Animaux.Especes.Marins;
 
 public class EnclosAquarium extends Enclos{
