@@ -4,6 +4,7 @@
  */
 package Enclos;
 
+import Animaux.Animaux;
 import Animaux.Especes.Volants;
 
 public class EnclosVolieres extends Enclos{
