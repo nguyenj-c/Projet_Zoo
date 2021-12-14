@@ -7,11 +7,12 @@ package Enclos;
 import java.util.*;
 
 import Animaux.Animaux;
+import Animaux.Especes.Mammiferes;
 import Game.initGame;
 
 public class Enclos {
 	private String name;
-	private double supercifie;
+	private double superficie;
 	private int maxAnimals;
 	private int nbAnimals;
 	private ArrayList<Animaux> actualAnimals;
@@ -36,10 +37,10 @@ public class Enclos {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Enclos(String name, double supercifie, int maxAnimals) {
+	public Enclos(String name, double superficie, int maxAnimals) {
 		super();
 		this.name = name;
-		this.supercifie = supercifie;
+		this.superficie = superficie;
 		this.maxAnimals = maxAnimals;
 		this.nbAnimals = 0;
 		this.actualAnimals = new ArrayList<Animaux>();
@@ -82,15 +83,15 @@ public class Enclos {
 	 * Retourne la superficie de l'enclos
 	 * @return the supercifie
 	 */
-	public double getSupercifie() {
-		return supercifie;
+	public double getSuperficie() {
+		return superficie;
 	}
 
 	/** Permet de modifier la superficie de l'enclos
 	 * @param supercifie the supercifie to set
 	 */
-	public void setSupercifie(double supercifie) {
-		this.supercifie = supercifie;
+	public void setSuperficie(double superficie) {
+		this.superficie = superficie;
 	}
 
 	/**
