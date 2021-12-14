@@ -1,17 +1,19 @@
 /**
- * 
+ * @author Nguyen, Khalil
+ *
  */
 package test;
+
+
 import java.util.Random;
 
 import Animaux.*;
+import Animaux.Especes.Mammiferes;
+import Animaux.Especes.Marins;
+import Animaux.Especes.Volants;
 import Enclos.Enclos;
 
 
-/**
- * @author n19004502
- *
- */
 public class test {
 
 	/**
@@ -19,9 +21,24 @@ public class test {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Tigres tigre1 = new Tigres("tigre",10);
-		Pingouins pingouin1 = new Pingouins("pingouin",80);
-		Ours our1 = new Ours("ours",20);
+		Tigres tigre1 = new Tigres("tigre");
+		if(tigre1 instanceof Mammiferes) {
+			System.out.print("cest un mammiferes\n");
+		}else {
+			System.out.print("cest autre chose");
+		}
+		Pingouins pingouin1 = new Pingouins("pingouin");
+		if(pingouin1 instanceof Marins) {
+			System.out.print("cest un marins\n");
+		}else {
+			System.out.print("cest autre chose");
+		}
+		if(pingouin1 instanceof Volants) {
+			System.out.print("cest un volants");
+		}else {
+			System.out.print("cest autre chose");
+		}
+		/*Ours our1 = new Ours("ours");
 		tigre1.eat();
 		tigre1.beHealed();
 		tigre1.deplacement();
@@ -44,7 +61,10 @@ public class test {
 		//enclos1.transferer(our1, enclos2);
 		System.out.println(enclos2);
 		enclos1.enlever(pingouin1);
-		enclos1.maintenance();
+		enclos1.maintenance();*/
+		Random r = new Random();
+		double result = r.nextDouble();
+		System.out.println(result);
 	}
 
 }
