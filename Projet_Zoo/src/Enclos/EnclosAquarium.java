@@ -8,7 +8,7 @@ import Animaux.Animaux;
 import Animaux.Especes.Marins;
 
 public class EnclosAquarium extends Enclos{
-	private int profondeur;
+	private double profondeur;
 	private double saliniteEau;
 	
 	
@@ -16,7 +16,7 @@ public class EnclosAquarium extends Enclos{
 	 * Retourne la profondeur de l'aquarium
 	 * @return the profondeur
 	 */
-	public int getProfondeur() {
+	public double getProfondeur() {
 		return profondeur;
 	}
 
@@ -25,7 +25,7 @@ public class EnclosAquarium extends Enclos{
 	 * Change la profondeur de l'aquarium
 	 * @param profondeur the profondeur to set
 	 */
-	public void setProfondeur(int profondeur) {
+	public void setProfondeur(double profondeur) {
 		this.profondeur = profondeur;
 	}
 
@@ -67,10 +67,11 @@ public class EnclosAquarium extends Enclos{
 	 * @param profondeur
 	 * @param saliniteEau
 	 */
-	public EnclosAquarium(String name, double superficie, int maxAnimals, int profondeur, double saliniteEau) {
+	public EnclosAquarium(String name, double superficie, int maxAnimals, double profondeur) {
 		super(name, superficie, maxAnimals);
+		Random r = new Random();
 		this.profondeur = profondeur;
-		this.saliniteEau = saliniteEau;
+		this.saliniteEau = r.nextDouble();
 	}
 	
 }
