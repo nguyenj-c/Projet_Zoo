@@ -216,28 +216,16 @@ public class Enclos {
 		return "Enclos { name=" + name + ", supercifie=" + superficie + ", maxAnimals=" + maxAnimals + ", nbAnimals="
 				+ nbAnimals + ", actualAnimals=" + actualAnimals + " }";
 	}
-	public static void affichageMenu() {
-		System.out.println("\nMenu de gestion des enclos :\n" + "1 - Créer un nouvel enclos\n"
-				+ "2 - Examiner un enclos\n" + "3 - Ajouter un animal à un enclos\n"
-				+ "4 - Supprimer un animal d'un enclos\n" + "5 - Transférer les animaux d'un enclos à un autre\n"
-				+ "6 - Nettoyer un enclos\n" + "7 - Nourrir les animaux d'un enclos\n"
-				+ "8 - Consulter les informations d'un enclos\n" + "9 - Retour");
-	}
-	public static void affichageMenuCreateEnclos() {
-		System.out.println("Création d'un nouvel enclos.\n" + "Quel type d'enclos voulez vous ajouter au Zoo ?\n"
-				+ "1 - Un enclos normal\n" + "2 - Une volière\n" + "3 - Un aquarium");
-	}
-
-	public static void getNameEnclos() {
-		System.out.println("Quel nom voulez vous donner à l'enclos ?");
-	}
-
-	public static void getAreaEnclos() {
-		System.out.println("Quel est la superficie de l'enclos ?");
-	}
-
-	public static void getMaxAnimalsEnclos() {
-		System.out.println("Quel est le nombre maximal d'animaux pouvant être mit dans l'enclos ?");
-	}
-
+	
+	/**
+     * Permet de savoir si un animal est compatible avec l'enclos
+     * @param animal
+     * @return true s'il est compatible, false sinon
+     */
+    public boolean isCompatible(Animaux animal) {
+        if(animal == null) {
+            throw new IllegalArgumentException("L'animal ne peut pas être vide.");
+        }
+        return animal instanceof Mammiferes;
+    }
 }
