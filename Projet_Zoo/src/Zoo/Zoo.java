@@ -6,8 +6,8 @@ package Zoo;
 
 import java.util.ArrayList;
 import java.util.List;
-import Animaux.Animaux;
 
+import Animaux.Animaux;
 import Enclos.Enclos;
 
 public class Zoo {
@@ -112,7 +112,7 @@ public class Zoo {
      * @return int
      */
     public int numberAnimalsZoo() {
-        return list_enclos.stream().mapToInt(Enclos::getActualAnimals().size()).sum();
+        return list_enclos.stream().mapToInt(Enclos::getActualAnimalsSize).sum();
     }
 	
 	
