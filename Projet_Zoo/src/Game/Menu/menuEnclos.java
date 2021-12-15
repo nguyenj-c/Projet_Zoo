@@ -25,20 +25,20 @@ public class menuEnclos {
     private static Enclos enclos;
     
 	public static void affichageMenu() {
-		System.out.println("\nMenu de gestion des enclos :\n" + "1 - Créer un nouvel enclos\n"
-				+ "2 - Examiner un enclos\n" + "3 - Ajouter un animal à un enclos\n"
-				+ "4 - Supprimer un animal d'un enclos\n" + "5 - Transférer les animaux d'un enclos à un autre\n"
+		System.out.println("\nMenu de gestion des enclos :\n" + "1 - CrÃ©er un nouvel enclos\n"
+				+ "2 - Examiner un enclos\n" + "3 - Ajouter un animal Ã  un enclos\n"
+				+ "4 - Supprimer un animal d'un enclos\n" + "5 - TransfÃ©rer les animaux d'un enclos Ã  un autre\n"
 				+ "6 - Nettoyer un enclos\n" + "7 - Nourrir les animaux d'un enclos\n"
 				+ "8 - Consulter les informations d'un enclos\n" + "9 - Retour");
 	}
 
 	public static void affichageMenuCreateEnclos() {
-		System.out.println("Création d'un nouvel enclos.\n" + "Quel type d'enclos voulez vous ajouter au Zoo ?\n"
-				+ "1 - Un enclos normal\n" + "2 - Une volière\n" + "3 - Un aquarium");
+		System.out.println("CrÃ©ation d'un nouvel enclos.\n" + "Quel type d'enclos voulez vous ajouter au Zoo ?\n"
+				+ "1 - Un enclos normal\n" + "2 - Une voliÃ¨re\n" + "3 - Un aquarium");
 	}
 
 	public static void getNameEnclos() {
-		System.out.println("Quel nom voulez vous donner à l'enclos ?");
+		System.out.println("Quel nom voulez vous donner Ã  l'enclos ?");
 	}
 
 	public static void getAreaEnclos() {
@@ -46,13 +46,13 @@ public class menuEnclos {
 	}
 
 	public static void getMaxAnimalsEnclos() {
-		System.out.println("Quel est le nombre maximal d'animaux pouvant être mit dans l'enclos ?");
+		System.out.println("Quel est le nombre maximal d'animaux pouvant Ãªtre mit dans l'enclos ?");
 	}
 	
     public static void getTypeEnclos() {
         System.out.println("Quel est le type de l'enclos ?\n" +
                 "1 - Enclos normal\n" +
-                "2 - Volière\n" +
+                "2 - VoliÃ¨re\n" +
                 "3 - Aquarium");
     }
 	
@@ -71,7 +71,7 @@ public class menuEnclos {
                 initGame.getZoo().addEnclos(enclos);
                 break;
             case 2:
-            	System.out.println("Quel est la hauteur de la volière ?");
+            	System.out.println("Quel est la hauteur de la voliÃ¨re ?");
                 double hauteur = scanner.nextDouble();
                 enclos = new EnclosVolieres(nameEnclos, areaEnclos, maxAnimalsEnclos, hauteur);
                 initGame.getZoo().addEnclos(enclos);
@@ -85,9 +85,9 @@ public class menuEnclos {
 
                 break;
             default:
-                throw new IllegalArgumentException("Sélection en dehors du menu.");
+                throw new IllegalArgumentException("SÃ©lection en dehors du menu.");
         }
-        System.out.println("L'enclos a été correctement créé.");
+        System.out.println("L'enclos a Ã©tÃ© correctement crÃ©Ã©.");
     }
 
     
@@ -123,7 +123,7 @@ public class menuEnclos {
                 initGame.menu();
                 break;
             default:
-                throw new IllegalArgumentException("Sélection en dehors du menu.");
+                throw new IllegalArgumentException("SÃ©lection en dehors du menu.");
         }
     }
 
@@ -173,10 +173,10 @@ public class menuEnclos {
             selected = scanner.nextInt() - 1;
         }
         return enclos = enclos2.get(selected);
-
     }
+	
     public static void getEnclos(List<String> enclosureNames) {
-        System.out.println("Quel enclos voulez vous sélectionner ?");
+        System.out.println("Quel enclos voulez vous sÃ©lectionner ?");
         for (int i = 0; i < enclosureNames.size(); i++) {
             System.out.println((i+1) + " - " + enclosureNames.get(i));
         }
