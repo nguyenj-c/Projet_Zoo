@@ -59,7 +59,7 @@ public class initGame {
 			menuEnclos.menu();
 			break;
 		case 3:
-			
+			menuZoo.menu();
 			break;
 		case 4:
 			startGame();
