@@ -3,10 +3,7 @@ package Game;
 import java.util.Scanner;
 
 import Animaux.Animaux;
-import Enclos.Enclos;
-import Game.Menu.menuAnimaux;
-import Game.Menu.menuEmploye;
-import Game.Menu.menuEnclos;
+import Game.Menu.*;
 import Zoo.Employe;
 import Zoo.Zoo;
 
