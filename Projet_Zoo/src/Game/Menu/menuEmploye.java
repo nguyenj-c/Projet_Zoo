@@ -6,22 +6,20 @@ package Game.Menu;
 
 public class menuEmploye {
 
-	
-    
     public static void getNameEmploye() {
-        System.out.println("Quel est le nom de votre employé ?");
+        System.out.println("Quel est le nom de votre employÃ© ?");
     }
 
     public static void getSexEmploye() {
-        System.out.println("Quel est le sexe de votre employé ? (Homme ou Femme)");
+        System.out.println("Quel est le sexe de votre employÃ© ? (Homme ou Femme)");
     }
 
     public static void getAgeEmploye() {
-        System.out.println("Quel est l'age de votre employé ?");
+        System.out.println("Quel est l'age de votre employÃ© ?");
     }
     public static void successEmploye() {
-        System.out.println("L'employé à été créé !\n" +
-                "Nous allons maintenant créer le Zoo.");
+        System.out.println("L'employÃ© Ã  Ã©tÃ© crÃ©Ã© !\n" +
+                "Nous allons maintenant crÃ©er le Zoo.");
     }
     
 }
