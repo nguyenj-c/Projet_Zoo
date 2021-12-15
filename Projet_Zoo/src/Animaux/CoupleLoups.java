@@ -19,7 +19,7 @@ public class CoupleLoups {
 	
 	public void setloupMale(Loups loupMale) {
         if('α' == loupMale.getRangDomination()) {
-        	if('m' == loupMale.getSexe()) {
+        	if('m' == loupMale.isSexe()) {
         		this.loupMale = loupMale;
         	} else {
         	 System.out.println("Le loup mâle doit être un mâle");	
@@ -32,7 +32,7 @@ public class CoupleLoups {
 
     public void setloupFemelle(Loups loupFemelle) {
         if('α' == loupFemelle.getRangDomination()) {
-        	if('f' == loupFemelle.getSexe()) {
+        	if('f' == loupFemelle.isSexe()) {
         		this.loupFemelle = loupFemelle;
         	} else {
         	 System.out.println("Le loup femelle doit être un femelle");	
