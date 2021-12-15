@@ -166,7 +166,7 @@ public class menuEnclos {
 
         selected = -1;
         Zoo zoo = null;
-        List<? extends Enclos> enclos2 = zoo.getEnclosuresByType(selectedType);
+        List<? extends Enclos> enclos2 = zoo.getEnclosByType(selectedType);
         List<String> names = enclos2.stream().map(Enclos::getName).collect(Collectors.toList());
         while (selected < 0 || selected >= enclos2.size()) {
             getEnclos(names);
