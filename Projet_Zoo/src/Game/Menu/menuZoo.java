@@ -55,9 +55,9 @@ public class menuZoo {
                 zoo);
     }
 
-    public static void informationsEmployee(String employee) {
+    public static void informationsEmploye(String employe) {
         System.out.println("Informations de l'employé :\n" +
-                employee);
+                employe);
     }
 
     
@@ -116,6 +116,6 @@ public class menuZoo {
     }
 
     public static void informationsEmploye() {
-        informationsEmployee(employe.toString());
+        informationsEmploye(employe.toString());
     }
 }
