@@ -71,7 +71,7 @@ public class initGame {
 
 	public void start() {
 		startGame();
-		System.out.print("Pour commencer, nous allons créer un employé qui sera chargé de gérer et de s'occuper du Zoo.");
+		System.out.print("Pour commencer, nous allons créer un employé qui sera chargé de gérer et de s'occuper du Zoo.\n");
 		Scanner scanner = new Scanner(System.in);
 		menuEmploye.getNameEmploye();
 		String nameEmploye = scanner.next();
