@@ -29,32 +29,32 @@ public class menuAnimaux {
     
 	public static void affichageMenu() {
 		System.out.println(
-				"\nMenu de gestion des animaux :\n" + "1 - Créer un nouvel animal\n" + "2 - Soigner un animal\n"
+				"\nMenu de gestion des animaux :\n" + "1 - CrÃ©er un nouvel animal\n" + "2 - Soigner un animal\n"
 						+ "3 - Nourrir un animal\n" + "4 - Consulter les informations d'un animal\n" + "5 - Retour");
 	}
 
 	public static void affichageMenuCreateAnimal() {
-		System.out.println("Création d'un nouvel animal.\n" + "Quel type d'animal voulez vous ajouter au Zoo ?\n"
+		System.out.println("CrÃ©ation d'un nouvel animal.\n" + "Quel type d'animal voulez vous ajouter au Zoo ?\n"
 				+ "1 - Un Aigle\n" + "2 - Une Baleine\n" + "3 - Un Loup\n" + "4 - Un Ours\n" + "5 - Un Pingouin\n"
 				+ "6 - Un Poisson rouge\n" + "7 - Un Requin\n" + "8 - Un Tigre\n");
 	}
 
 	public static void getNameAnimal() {
-		System.out.println("Quel nom voulez vous donner à  l'animal ?");
+		System.out.println("Quel nom voulez vous donner Ã Â  l'animal ?");
 	}
 
 	public static void successCreate() {
-		System.out.println("L'animal a Ã©tÃ© correctement créé.");
+		System.out.println("L'animal a ÃƒÂ©tÃƒÂ© correctement crÃ©Ã©.");
 	}
 
 	public static void getTypeAnimal() {
-		System.out.println("Quel type d'animal voulez vous sélectionner ?\n" + "1 - Un Aigle\n" + "2 - Une Baleine\n"
+		System.out.println("Quel type d'animal voulez vous sÃ©lectionner ?\n" + "1 - Un Aigle\n" + "2 - Une Baleine\n"
 				+ "3 - Un Loup\n" + "4 - Un Ours\n" + "5 - Un Pingouin\n" + "6 - Un Poisson rouge\n" + "7 - Un Requin\n"
 				+ "8 - Un Tigre\n");
 	}
 
 	public static void getAnimal() {
-		System.out.println("Quel animal voulez vous sélectionner ?");
+		System.out.println("Quel animal voulez vous sÃ©lectionner ?");
 	}
 
 	public static void menu() {
@@ -77,7 +77,7 @@ public class menuAnimaux {
 			initGame.menu();
 			break;
 		default:
-			throw new IllegalArgumentException("Sélection en dehors du menu.");
+			throw new IllegalArgumentException("SÃ©lection en dehors du menu.");
 		}
 	}
 
@@ -112,7 +112,7 @@ public class menuAnimaux {
 			new Tigres(nameAnimal);
 			break;
 		default:
-			throw new IllegalArgumentException("Sélection en dehors du menu.");
+			throw new IllegalArgumentException("SÃ©lection en dehors du menu.");
 		}
 		successCreate();
 	}
@@ -146,10 +146,14 @@ public class menuAnimaux {
 				especes =  Tigres.class;
 				break;
             default:
-                throw new IllegalArgumentException("Sélection en dehors du menu.");
+                throw new IllegalArgumentException("SÃ©lection en dehors du menu.");
         }
         System.out.println("Informations de l'animal :\n" +
         		especes.toString());
+    }
+	    public static void displayAnimalList(List<String> list) {
+        System.out.println("Voici la liste des animaux : ");
+        list.forEach(System.out::println);
     }
 	/*public void menuFeedAnimal() {
         if (zoo.numberAnimalsZoo() == 0) {
@@ -185,7 +189,7 @@ public class menuAnimaux {
                 clazz = Wolf.class;
                 break;
             default:
-                throw new IllegalArgumentException("Sélection en dehors du menu.");
+                throw new IllegalArgumentException("SÃ©lection en dehors du menu.");
         }
         List<Animal> animalsOfSelectedType = AnimalRegistry.getRegisteredAnimalsByClass(clazz);
         List<String> animalsOfSelectedTypeStr = animalsOfSelectedType.stream()
@@ -242,7 +246,7 @@ public class menuAnimaux {
                 clazz = Wolf.class;
                 break;
             default:
-                throw new IllegalArgumentException("Sélection en dehors du menu.");
+                throw new IllegalArgumentException("SÃ©lection en dehors du menu.");
         }
         List<Animal> animalsOfSelectedType = AnimalRegistry.getRegisteredAnimalsByClass(clazz);
         List<String> animalsOfSelectedTypeStr = animalsOfSelectedType.stream()
