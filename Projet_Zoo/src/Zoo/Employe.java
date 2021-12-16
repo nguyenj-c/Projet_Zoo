@@ -142,7 +142,11 @@ public class Employe {
 	
 	@Override
 	public String toString() {
-		return "Employe { name= " + name + ", sexe= " + sexe + ", age= " + age + " }";
+		if(getSexe() == true) {
+			return "Employe { name= " + name + ", sexe= homme , age= " + age + " }";
+		}else {
+			return "Employe { name= " + name + ", sexe= femme, age= " + age + " }";
+		}
 	}
 }
 
