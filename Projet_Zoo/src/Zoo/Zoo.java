@@ -87,7 +87,7 @@ public class Zoo {
 		List<T> typeList = new ArrayList<>();
 		for (Enclos allEnclos : getAllEnclos()) {
 			if(allEnclos.getClass().equals(type)) {
-				tList.add((T) allEnclos);
+				typeList.add((T) allEnclos);
 			}
 		}
 		return typeList;
