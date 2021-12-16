@@ -4,17 +4,10 @@
  */
 package Game.Menu;
 
+import java.util.List;
 import java.util.Scanner;
 
-import Animaux.Aigles;
-import Animaux.Animaux;
-import Animaux.Baleines;
-import Animaux.Loups;
-import Animaux.Ours;
-import Animaux.Pingouins;
-import Animaux.Poissons_Rouges;
-import Animaux.Requins;
-import Animaux.Tigres;
+import Animaux.*;
 import Game.initGame;
 import Zoo.Employe;
 import Zoo.Zoo;
