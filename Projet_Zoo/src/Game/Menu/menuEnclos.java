@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-import Animaux.Animaux;
+import Animaux.*;
 import Enclos.Enclos;
 import Enclos.EnclosAquarium;
 import Enclos.EnclosVolieres;
@@ -99,19 +99,19 @@ public class menuEnclos {
                 menuCreateEnclos();
                 break;
             case 2:
-                //menuExamineEnclos();
+                menuExamineEnclos();
                 break;
             case 3:
-                //menuAddAnimal();
+                menuAddAnimal();
                 break;
             case 4:
-                //menuRemoveAnimal();
+                menuRemoveAnimal();
                 break;
             case 5:
                 menuTransfertAnimal();
                 break;
             case 6:
-                //menuCleanEnclos();
+                menuCleanEnclos();
                 break;
             case 7:
                 //menuFeedAnimals();
@@ -127,15 +127,81 @@ public class menuEnclos {
         }
     }
 
-	public void menuExamineEnclos() {
+	public static void menuExamineEnclos() {
         if (zoo.getAllEnclos().isEmpty()) {
         	System.out.println("Il n'y a pas d'enclos dans le Zoo.");
             return;
         }
         Enclos enclos = selectEnclos();
-        Employe employe = null;
 		employe.analyseEnclos(enclos);
     }
+	
+	 private static Animaux selectAnimal() {
+	        if (zoo.getAllEnclos().isEmpty()) {
+	        	System.out.println("\nIl n'y a pas d'enclos contenant des animaux dans le Zoo.");
+	            return null;
+	        }
+	        menuAnimaux.getTypeAnimal();
+	        int selected = scanner.nextInt();
+	        Class<? extends Animaux> clazz = null;
+	        switch (selected) {
+	            case 1:
+	                clazz = Aigles.class;
+	                break;
+	            case 2:
+	                clazz = Baleines.class;
+	                break;
+	            case 3:
+	                clazz = Loups.class;
+	                break;
+	            case 4:
+	                clazz = Ours.class;
+	                break;
+	            case 5:
+	                clazz = Pingouins.class;
+	                break;
+	            case 6:
+	                clazz = Poissons_Rouges.class;
+	                break;
+	            case 7:
+	                clazz = Requins.class;
+	                break;
+	            case 8:
+	                clazz = Tigres.class;
+	                break;
+	            default:
+	                throw new IllegalArgumentException("Sélection en dehors du menu.");
+	        }
+	        List<Animaux> animalsOfSelectedType = AnimalRegistry.getRegisteredAnimalsByClass(clazz);
+	        List<String> animalsOfSelectedTypeStr = animalsOfSelectedType.stream()
+	                .map(Animaux::getName)
+	                .collect(Collectors.toList());
+	        menuAnimaux.displayAnimalList(animalsOfSelectedTypeStr);
+	        String animalSelected = "";
+	        while(!animalsOfSelectedTypeStr.contains(animalSelected)) {
+	            menuAnimaux.getAnimal();
+	            animalSelected = scanner.next();
+	        }
+	        String finalAnimalSelected = animalSelected;
+	        return animalsOfSelectedType.stream()
+	                .filter(animal1 -> animal1.getName().equals(finalAnimalSelected))
+	                .findAny().orElseThrow();
+	    }
+	
+	public static void menuAddAnimal() {
+        Animaux targetAnimal = selectAnimal();
+        enclos = selectEnclos();
+        enclos.ajouter(targetAnimal);
+        System.out.println("L'animal à été correctement ajouté à l'enclos.");
+    }
+
+    public static void menuRemoveAnimal() {
+    	Animaux targetAnimal = selectAnimal();
+        enclos = selectEnclos();
+        enclos.enlever(targetAnimal);
+        System.out.println("L'animal à été correctement ajouté à l'enclos.");
+    }
+
 
     public static void menuInformationsEnclos() {
         if (zoo.getAllEnclos().isEmpty()) {
@@ -165,7 +231,6 @@ public class menuEnclos {
         }
 
         selected = -1;
-        Zoo zoo = null;
         List<? extends Enclos> enclos2 = zoo.getEnclosByType(selectedType);
         List<String> names = enclos2.stream().map(Enclos::getName).collect(Collectors.toList());
         while (selected < 0 || selected >= enclos2.size()) {
@@ -182,7 +247,7 @@ public class menuEnclos {
         }
     }
     public static void menuTransfertAnimal() {
-        Animaux targetAnimal = null; //selectAnimal();
+        Animaux targetAnimal = selectAnimal();
 
         enclos= selectEnclos();
         Enclos fromEnclosure = zoo.getEnclosOf(targetAnimal);
@@ -192,7 +257,7 @@ public class menuEnclos {
 
     }
 
-    public void menuCleanEnclos() {
+    public static void menuCleanEnclos() {
         if (zoo.getAllEnclos().isEmpty()) {
         	System.out.println("Il n'y a pas d'enclos dans le Zoo.");
             return;
@@ -204,4 +269,3 @@ public class menuEnclos {
 
 
 }
-
