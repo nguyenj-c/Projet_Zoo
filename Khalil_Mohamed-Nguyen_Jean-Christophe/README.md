@@ -28,6 +28,6 @@ dans le temrinal windows :
 ``System.setProperty("file.encoding", "UTF-8")``
 
 Assurer vous egalement que eclipse soit sous encodage UTF-8.
-Pour faire cela oivrez le projet dans eclipse et faites clic droit sur le dossier racine -> aller dans ``Properties`` -> Text file encoding choisir others -> UTF-8
+Pour faire cela ouvrez le projet dans eclipse et faites clic droit sur le dossier racine -> aller dans ``Properties`` -> Text file encoding choisir others -> UTF-8
 
 Sur Ubuntu, normalement il y aura pas de problèmes de caracteres spéciaux.
