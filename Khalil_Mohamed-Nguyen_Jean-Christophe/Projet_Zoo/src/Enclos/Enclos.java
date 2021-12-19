@@ -64,9 +64,9 @@ public class Enclos {
 		this.superficie = superficie;
 		this.maxAnimals = maxAnimals;
 		this.nbAnimals = 0;
-		this.actualAnimals = new ArrayList<>();
 		Enclos.actualAnimals = new ArrayList<>();
-        Enclos.actualProprete = degreProprete.bon;
+		Enclos.actualProprete = degreProprete.bon;
+		EnclosRegistry.registerEnclos(this);
 	}
 
 	/**
