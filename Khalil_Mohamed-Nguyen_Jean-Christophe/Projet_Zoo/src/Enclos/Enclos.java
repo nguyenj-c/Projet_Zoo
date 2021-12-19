@@ -30,7 +30,7 @@ public class Enclos {
 	/**
 	 * Liste des animaux dans l'enclos
 	 */
-	private static ArrayList<Animaux> actualAnimals;
+	private ArrayList<Animaux> actualAnimals;
 
 	/**
 	 * Etat de propreté de l'enclos
@@ -64,7 +64,7 @@ public class Enclos {
 		this.superficie = superficie;
 		this.maxAnimals = maxAnimals;
 		this.nbAnimals = 0;
-		Enclos.actualAnimals = new ArrayList<>();
+		this.actualAnimals = new ArrayList<>();
 		Enclos.actualProprete = degreProprete.bon;
 		EnclosRegistry.registerEnclos(this);
 	}
@@ -183,7 +183,7 @@ public class Enclos {
 	 * @param actualAnimals the actualAnimals of the enclosure
 	 */
 	public void setActualAnimals(ArrayList<Animaux> actualAnimals) {
-		Enclos.actualAnimals = actualAnimals;
+		this.actualAnimals = actualAnimals;
 	}
 
 	/**
@@ -264,7 +264,7 @@ public class Enclos {
 	@Override
 	public String toString() {
 		return "Enclos { name=" + name + ", supercifie=" + superficie + ", maxAnimals=" + maxAnimals + ", nbAnimals="
-				+ nbAnimals + ", actualAnimals=" + actualAnimals + " }";
+				+ nbAnimals + ", actualAnimals=" + this.actualAnimals + " }";
 	}
 
 	/**
